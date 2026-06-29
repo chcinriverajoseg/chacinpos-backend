@@ -11,7 +11,14 @@ const proveedoresRoutes = require('./routes/proveedores')
 const app = express()
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174'],
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'http://127.0.0.1:5173',
+    'http://127.0.0.1:5174',
+    'https://chacinpos-frontend.vercel.app',
+    'https://chacinpos-frontend-git-main-jose-gregorios-projects.vercel.app'
+  ],
   credentials: true
 }))
 app.use(express.json())
