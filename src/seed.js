@@ -1,10 +1,5 @@
 const bcrypt = require('bcryptjs')
-const { Pool } = require('pg')
-
-const pool = new Pool({
-  connectionString: 'postgresql://postgresql:KtS9sPesfWnwK6958LoBTypZwTiApC9o@dpg-d91ekalaeets73a0f4o0-a.oregon-postgres.render.com/chacinpos',
-  ssl: { rejectUnauthorized: false }
-})
+const pool = require('./config/db')
 
 async function seed() {
   try {
