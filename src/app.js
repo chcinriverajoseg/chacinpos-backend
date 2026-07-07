@@ -7,6 +7,7 @@ const productosRoutes   = require('./routes/productos')
 const ventasRoutes      = require('./routes/ventas')
 const clientesRoutes    = require('./routes/clientes')
 const proveedoresRoutes = require('./routes/proveedores')
+const configRoutes      = require('./routes/config')
 
 const app = express()
 
@@ -29,6 +30,7 @@ app.use('/api/productos',   productosRoutes)
 app.use('/api/ventas',      ventasRoutes)
 app.use('/api/clientes',    clientesRoutes)
 app.use('/api/proveedores', proveedoresRoutes)
+app.use('/api/config',      configRoutes)
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', mensaje: 'ChacinPOS API funcionando ✅' })
